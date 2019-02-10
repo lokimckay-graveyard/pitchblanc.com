@@ -1,0 +1,16 @@
+{
+  "dependencies": {
+    "next": "^7.0.3",
+    "react": "^16.8.1",
+    "react-dom": "^16.8.1"
+  },
+  "scripts": {
+    "dev": "next",
+    "build": "next build",
+    "start": "next start",
+    "lint": "prettier **/*.js --write"
+  },
+  "devDependencies": {
+    "prettier": "^1.16.4"
+  }
+}
