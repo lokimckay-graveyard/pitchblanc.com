@@ -5,7 +5,7 @@ const containerStyle = {
   position: "absolute",
   width: "100%",
   height: "100%",
-  backgroundColor: "grey"
+  backgroundColor: "white"
 };
 
 const contentStyle = {
@@ -29,7 +29,7 @@ const bgImgStyle = {
 };
 
 export default () => (
-  <div style={containerStyle}>
+  <main style={containerStyle}>
     <Head>
       <title>Pitch Blanç</title>
       <meta name="viewport" content="initial-scale=1.0, width=device-width" />
@@ -47,5 +47,5 @@ export default () => (
         margin: 0;
       }
     `}</style>
-  </div>
+  </main>
 );

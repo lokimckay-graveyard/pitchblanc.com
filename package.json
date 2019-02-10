@@ -1,12 +1,13 @@
 {
   "dependencies": {
-    "next": "^7.0.3",
+    "next": "^8.0.0-canary.7",
     "react": "^16.8.1",
     "react-dom": "^16.8.1"
   },
   "scripts": {
     "dev": "next",
     "build": "next build",
+    "now-build": "next build",
     "start": "next start",
     "lint": "prettier **/*.js --write"
   },
