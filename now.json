@@ -1,7 +1,19 @@
 {
   "version": 2,
-  "name": "pitchblanc.com",
   "builds": [
-    { "src": "next.config.js", "use": "@now/next" }
-  ]
+    { "src": "wp-config.php", "use": "@now/wordpress" }
+  ],
+  "routes": [
+    { "src": "/wp-admin/?", "dest": "index.php" },
+    { "src": ".*\\.php$", "dest": "index.php" }
+  ],
+  "env": {
+    "DB_NAME": "@pb_wp_db_dev_name",
+    "DB_USER": "@pb_wp_db_dev_user",
+    "DB_PASSWORD": "@pb_wp_db_dev_password",
+    "DB_HOST": "@pb_wp_db_dev_host",
+    "WP_SALT": "@pb_wp_dev_salt",
+    "WP_ENV": "dev"
+  },
+  "regions": ["iad1"]
 }
