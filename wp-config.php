@@ -83,6 +83,13 @@ define( 'WP_SITEURL', 'https://' . $_SERVER['HTTP_HOST'] );
 define( 'WP_HOME', 'https://' . $_SERVER['HTTP_HOST'] );
 define( 'WP_CONTENT_URL', 'https://' . $_SERVER['HTTP_HOST'] . '/wp-content' );
 
+/* S3 uploads */
+define( 'S3_UPLOADS_BUCKET', 'pb-wp-pitchblanc' );
+define( 'S3_UPLOADS_KEY', $_ENV['S3_KEY'] );
+define( 'S3_UPLOADS_SECRET', $_ENV['S3_SECRET'] );
+define( 'S3_UPLOADS_REGION', 'us-east-1' );
+/* end S3 uploads */
+
 /* That's all, stop editing! Happy blogging. */
 
 /** Absolute path to the WordPress directory. */

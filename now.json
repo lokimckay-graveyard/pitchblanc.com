@@ -8,12 +8,14 @@
     { "src": ".*\\.php$", "dest": "index.php" }
   ],
   "env": {
+    "WP_ENV": "dev",
     "DB_NAME": "@pb_wp_db_dev_name",
     "DB_USER": "@pb_wp_db_dev_user",
     "DB_PASSWORD": "@pb_wp_db_dev_password",
     "DB_HOST": "@pb_wp_db_dev_host",
     "WP_SALT": "@pb_wp_dev_salt",
-    "WP_ENV": "dev"
+    "S3_KEY": "@pb_wp_s3_key",
+    "S3_SECRET": "@pb_wp_s3_secret"
   },
   "regions": ["iad1"]
 }
