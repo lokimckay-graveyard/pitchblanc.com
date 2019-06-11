@@ -1,7 +1,9 @@
 {
   "dependencies": {
     "next": "^8.0.0-canary.7",
+    "prop-types": "^15.7.2",
     "react": "^16.8.1",
+    "react-bootstrap": "^1.0.0-beta.9",
     "react-dom": "^16.8.1"
   },
   "scripts": {
@@ -9,7 +11,7 @@
     "build": "next build",
     "now-build": "next build",
     "start": "next start",
-    "lint": "prettier **/*.js --write"
+    "pretty": "prettier **/*.js --write"
   },
   "devDependencies": {
     "prettier": "^1.16.4"
