@@ -1,20 +1,20 @@
 import Link from "next/link";
 import Head from "../components/head";
-import { Fragment } from "react";
 import Header from "../components/header";
+import { Fragment } from "react";
+import { Tab } from "react-bootstrap";
 
-const containerStyle = {
-  position: "absolute",
-  width: "100%",
-  height: "100%"
-};
+const containerStyle = {};
 
 export default props => (
   <Fragment>
     <main style={containerStyle}>
-      <Header />
-      {props.children}
+      <Tab.Container id="navTabs" defaultActiveKey="work" transition={false}>
+        <Header />
+        {props.children}
+      </Tab.Container>
     </main>
+
     <style global jsx>{`
       html,
       body {

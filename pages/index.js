@@ -1,6 +1,7 @@
 import Link from "next/link";
 import Head from "../components/head";
 import Layout from "../components/layout";
+import Content from "../components/content";
 
 const containerStyle = {
   position: "absolute",
@@ -12,5 +13,6 @@ const containerStyle = {
 export default () => (
   <Layout>
     <Head title="Pitch Blanc" />
+    <Content />
   </Layout>
 );

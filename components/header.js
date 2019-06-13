@@ -1,14 +1,16 @@
 import Link from "next/link";
 import { Fragment } from "react";
+import Nav from "./nav";
 
 const headerStyle = {
-  minHeight: 300,
-  height: "66%",
-  backgroundColor: "red"
+  height: 300,
+  top: -245,
+  background: "url(/static/img/bg.png) white bottom center no-repeat",
+  backgroundSize: "cover",
+  position: "sticky"
 };
 
 const titleStyle = {
-  backgroundColor: "blue",
   position: "relative",
   display: "inline-block",
   top: "33%",
@@ -18,9 +20,12 @@ const titleStyle = {
 };
 
 export default props => (
-  <div id="header" style={headerStyle}>
-    <div style={titleStyle}>
-      <span>Pitch Blanc</span>
+  <Fragment>
+    <div id="header" style={headerStyle}>
+      <div style={titleStyle}>
+        <span>Pitch Blanc</span>
+      </div>
+      <Nav />
     </div>
-  </div>
+  </Fragment>
 );
