@@ -1,5 +1,6 @@
 node_modules
 .next
+/bundles
 
 # lock files
 package-lock.json

@@ -1,6 +1,7 @@
 import { Tab } from "react-bootstrap";
 import { Fragment } from "react";
 import Lorum from "./lorum";
+import Work from "./work";
 
 const contentStyle = {
   padding: 32
@@ -11,8 +12,7 @@ export default props => {
     <Fragment>
       <Tab.Content style={contentStyle}>
         <Tab.Pane eventKey="work">
-          work
-          <Lorum />
+          <Work />
         </Tab.Pane>
         <Tab.Pane eventKey="about">
           about

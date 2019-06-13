@@ -5,12 +5,15 @@ import { Nav, Tab } from "react-bootstrap";
 const navStyle = {
   position: "absolute",
   bottom: 0,
-  width: "100%"
+  width: "100%",
+  paddingRight: 50
 };
 
 const itemStyle = {
   paddingLeft: 60,
   paddingRight: 60,
+  marginLeft: 10,
+  marginRight: 10,
   textAlign: "center"
 };
 
@@ -27,7 +30,7 @@ export default props => (
   <Nav
     variant="tabs"
     onSelect={props.onSelect}
-    className="justify-content-around"
+    className="justify-content-end"
     style={navStyle}
   >
     <Nav.Item>
