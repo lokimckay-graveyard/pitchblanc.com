@@ -2,15 +2,17 @@ import { Tab } from "react-bootstrap";
 import { Fragment } from "react";
 import Lorum from "./lorum";
 import Work from "./work";
+import { letterboxWidthPadding } from "../config/index";
 
 const contentStyle = {
-  padding: 32
+  paddingTop: 20,
+  paddingBottom: 20
 };
 
 export default props => {
   return (
     <Fragment>
-      <Tab.Content style={contentStyle}>
+      <Tab.Content style={contentStyle} className="px-3 px-md-5">
         <Tab.Pane eventKey="work">
           <Work />
         </Tab.Pane>

@@ -3,15 +3,20 @@ import Head from "../components/head";
 import Header from "../components/header";
 import { Fragment } from "react";
 import { Tab } from "react-bootstrap";
+import { letterboxWidth } from "../config/index";
 
 const containerStyle = {};
+const contentStyle = {
+  maxWidth: letterboxWidth,
+  margin: "auto"
+};
 
 export default props => (
   <Fragment>
     <main style={containerStyle}>
       <Tab.Container id="navTabs" defaultActiveKey="work" transition={false}>
         <Header />
-        {props.children}
+        <div style={contentStyle}>{props.children}</div>
       </Tab.Container>
     </main>
 

@@ -7,7 +7,8 @@ const headerStyle = {
   top: -245,
   background: "url(/static/img/bg.png) white bottom center no-repeat",
   backgroundSize: "cover",
-  position: "sticky"
+  position: "sticky",
+  zIndex: 1
 };
 
 const titleStyle = {
