@@ -20,8 +20,8 @@ const gallery = [
   {
     height: 400,
     items: [
-      { title: "Cat6", url: "http://placekitten.com/800/400", width: 8 },
-      { title: "Cat7", url: "http://placekitten.com/400/400", width: 4 }
+      { title: "Cat6", url: "http://placekitten.com/900/400", width: 11 },
+      { title: "Cat7", url: "http://placekitten.com/100/400", width: 1 }
     ]
   }
 ];
