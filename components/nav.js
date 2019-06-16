@@ -1,65 +1,39 @@
 import Link from "next/link";
 import { Fragment } from "react";
-import { Nav, Tab } from "react-bootstrap";
+import React from "react";
+import Paper from "@material-ui/core/Paper";
+import Tabs from "@material-ui/core/Tabs";
+import Tab from "@material-ui/core/Tab";
+import Box from "@material-ui/core/Box";
 import { letterboxWidth, letterboxWidthPadding } from "../config/index";
 
-const navStyle = {
-  position: "absolute",
-  bottom: 0,
-  left: "50%",
-  transform: `translateX(-50%)`,
-  width: "100%",
-  maxWidth: letterboxWidth,
-  margin: "auto"
+export default props => {
+  const [value, setValue] = React.useState(0);
+  const handleChange = (event, newValue) => {
+    setValue(newValue);
+  };
+  const boxStyle = {
+    position: "absolute",
+    bottom: 0,
+    width: "100%"
+  };
+  const paperStyle = { position: "absolute", height: "100%", width: "100%" };
+  return (
+    <Fragment>
+      <Box style={boxStyle} display="flex" justifyContent="flex-end">
+        <Tabs
+          value={value}
+          indicatorColor="primary"
+          textColor="primary"
+          onChange={handleChange}
+        >
+          <Tab label="work" />
+          <Tab label="about" />
+          <Tab label="team" />
+          <Tab label="contact" />
+        </Tabs>
+      </Box>
+      <style jsx>{``}</style>
+    </Fragment>
+  );
 };
-
-const itemStyle = {
-  paddingLeft: 50,
-  paddingRight: 50,
-  marginLeft: 10,
-  textAlign: "center"
-};
-
-const blockerStyle = {
-  backgroundColor: "white",
-  position: "absolute",
-  bottom: -10,
-  height: 10,
-  width: "100%",
-  zIndex: -1
-};
-
-export default props => (
-  <Fragment>
-    <Nav
-      variant="tabs"
-      id="navTabs"
-      onSelect={props.onSelect}
-      className="justify-content-end d-none d-md-flex px-3 px-md-5"
-      style={navStyle}
-    >
-      <Nav.Item>
-        <Nav.Link eventKey="work" style={itemStyle}>
-          Work
-        </Nav.Link>
-      </Nav.Item>
-      <Nav.Item>
-        <Nav.Link eventKey="about" style={itemStyle}>
-          About
-        </Nav.Link>
-      </Nav.Item>
-      <Nav.Item>
-        <Nav.Link eventKey="team" style={itemStyle}>
-          Team
-        </Nav.Link>
-      </Nav.Item>
-      <Nav.Item>
-        <Nav.Link eventKey="contact" style={itemStyle}>
-          Contact
-        </Nav.Link>
-      </Nav.Item>
-      <div style={blockerStyle}></div>
-    </Nav>
-    <style jsx>{``}</style>
-  </Fragment>
-);

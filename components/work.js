@@ -3,10 +3,6 @@ import { Fragment } from "react";
 import GalleryRow from "./galleryRow";
 import dynamic from "next/dynamic";
 
-const Muuri = dynamic(() => import("./muuri"), {
-  ssr: false
-});
-
 // const gallery = [
 //   {
 //     items: [
@@ -39,9 +35,7 @@ const muuriGallery = [
 
 export default props => (
   <Fragment>
-    <div>
-      <Muuri items={muuriGallery} />
-    </div>
+    <div></div>
     <style jsx>{``}</style>
   </Fragment>
 );
